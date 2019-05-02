@@ -58,21 +58,15 @@ export default class App extends React.Component {
                 <Text style={styles.container}>
                     Front POC PSL
                 </Text>
-                {/*
-                <Text>
-                    Location: {this.state.location}
-                </Text>
-                */}
+
                 {
                     (this.state.location !== null) ?
                     <MapView
-                    style={{flex: 0.5}}
+                    style={{flex: 1}}
                     region={this.state.mapToDisplay}
                     >
-                    <Marker coordinate={this.state.pointer} />
+                    <Marker coordinate={this.state.pointer} title={"Vous êtes ici"} />
                     </MapView> 
-                    
-                    
                     :
                     <Text>Waiting...</Text>
                 }
@@ -83,7 +77,6 @@ export default class App extends React.Component {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 0.5,
         textAlign: "center",
         textAlignVertical: "center",
         fontSize: 20
