@@ -1,5 +1,5 @@
 import React from 'react'
-import {View, Text, FlatList, StyleSheet, TouchableOpacity, Dimensions} from 'react-native'
+import {View, Text, FlatList, StyleSheet, TouchableOpacity, SafeAreaView} from 'react-native'
 import {Ionicons} from '@expo/vector-icons';
 import Style from "../../styles/Style";
 
@@ -24,30 +24,32 @@ export default class Trajets extends React.Component {
 
     render() {
         return (
-            <View style={{flex: 1}}>
-                    <FlatList
-                        contentContainerStyle={styles.list2}
-                        data={[
-                            {key: 'Trajet1'},
-                        ]}
-                        renderItem={item => this.renderItem2(item)}
-                        style={{flex: 1}}
-                    />
-                    <FlatList
-                        contentContainerStyle={styles.list}
-                        data={[
-                            {key: 'Trajet1'},
-                            {key: 'Trajet2'},
-                            {key: 'Trajet3'},
-                            {key: 'Trajet4'},
-                            {key: 'Trajet5'},
-                            {key: 'Trajet6'},
-                            {key: 'Trajet7'},
-                            {key: 'Trajet8'},
-                        ]}
-                        renderItem={item => this.renderItem(item)}
-                    />
-            </View>
+            <SafeAreaView style={{flex: 1}}>
+                <View style={{flex: 1}}>
+                        <FlatList
+                            contentContainerStyle={styles.list2}
+                            data={[
+                                {key: 'Trajet1'},
+                            ]}
+                            renderItem={item => this.renderItem2(item)}
+                            style={{flex: 1}}
+                        />
+                        <FlatList
+                            contentContainerStyle={styles.list}
+                            data={[
+                                {key: 'Trajet1'},
+                                {key: 'Trajet2'},
+                                {key: 'Trajet3'},
+                                {key: 'Trajet4'},
+                                {key: 'Trajet5'},
+                                {key: 'Trajet6'},
+                                {key: 'Trajet7'},
+                                {key: 'Trajet8'},
+                            ]}
+                            renderItem={item => this.renderItem(item)}
+                        />
+                </View>
+            </SafeAreaView>
         );
     }
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, Image } from 'react-native'
+import {View, Text, Image, SafeAreaView} from 'react-native'
 import { Ionicons } from '@expo/vector-icons'
 import Style from '../../styles/Style'
 
@@ -14,9 +14,11 @@ export default class Message extends React.Component{
 
     render() {
         return (
-            <View>
-                <Text>Messagerie</Text>
-            </View>
+            <SafeAreaView style={{flex: 1}}>
+                <View>
+                    <Text>Messagerie</Text>
+                </View>
+            </SafeAreaView>
         );
     }
 }

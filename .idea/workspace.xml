@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc403d56-6a24-42ee-a144-85f092fd60fc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/IG4_PI4_DevDurable_Front.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/map/Map.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/map/Map.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/message/Message.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/message/Message.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/trajet/Trajets.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/trajet/Trajets.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/user/connection/ConnectScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/user/connection/ConnectScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -34,11 +29,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/components/trajet/Trajets.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="56" column="29" selection-start-line="56" selection-start-column="29" selection-end-line="56" selection-end-column="29" />
+            <state relative-caret-position="165">
+              <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="44" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -49,10 +44,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/components/map/Map.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="11" column="54" selection-start-line="11" selection-start-column="52" selection-end-line="11" selection-end-column="54" />
+            <state relative-caret-position="390">
+              <caret line="58" column="16" selection-start-line="58" selection-start-column="16" selection-end-line="70" selection-end-column="23" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/components/message/Message.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -85,19 +92,19 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/components/map/Map.js" />
         <option value="$PROJECT_DIR$/components/home/Home.js" />
-        <option value="$PROJECT_DIR$/components/message/Message.js" />
         <option value="$PROJECT_DIR$/components/trajets/Trajets.js" />
         <option value="$PROJECT_DIR$/components/TabBar.js" />
         <option value="$PROJECT_DIR$/styles/Style.js" />
         <option value="$PROJECT_DIR$/components/user/connection/ConnectScreen.js" />
         <option value="$PROJECT_DIR$/App.js" />
         <option value="$PROJECT_DIR$/components/trajet/Trajets.js" />
+        <option value="$PROJECT_DIR$/components/map/Map.js" />
+        <option value="$PROJECT_DIR$/components/message/Message.js" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="388" />
     <option name="y" value="47" />
     <option name="width" value="1380" />
@@ -229,12 +236,12 @@
       <workItem from="1556816027020" duration="1325000" />
       <workItem from="1556817378206" duration="190000" />
       <workItem from="1556994556716" duration="4794000" />
-      <workItem from="1557126789492" duration="4362000" />
+      <workItem from="1557126789492" duration="4807000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36444000" />
+    <option name="totallyTimeSpent" value="36889000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="1055" extended-state="6" />
@@ -317,16 +324,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/message/Message.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="10" column="59" selection-start-line="10" selection-start-column="59" selection-end-line="10" selection-end-column="59" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/homebg.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -346,16 +343,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/map/Map.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="11" column="54" selection-start-line="11" selection-start-column="52" selection-end-line="11" selection-end-column="54" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/components/user/connection/ConnectScreen.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -368,8 +355,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/components/trajet/Trajets.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="56" column="29" selection-start-line="56" selection-start-column="29" selection-end-line="56" selection-end-column="29" />
+        <state relative-caret-position="165">
+          <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/map/Map.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="58" column="16" selection-start-line="58" selection-start-column="16" selection-end-line="70" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/message/Message.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>

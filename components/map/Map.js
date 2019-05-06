@@ -1,5 +1,5 @@
 import React from 'react';
-import {ActivityIndicator, Image, Text, View} from 'react-native';
+import {ActivityIndicator, Image, SafeAreaView, Text, View} from 'react-native';
 import {MapView, Location, Permissions} from 'expo';
 import { Ionicons } from '@expo/vector-icons';
 import Style from "../../styles/Style";
@@ -55,19 +55,21 @@ export default class Map extends React.Component {
 
     render() {
         return (
-            <View style={{flex: 1}}>
-                <Text>
-                    Location: {this.state.location}
-                </Text>
-                {
-                    (this.state.location !== null) ?
-                        <MapView
-                            style={{flex: 1}}
-                            region={this.state.mapToDisplay}
-                        /> :
-                        <ActivityIndicator size="large"/>
-                }
-            </View>
+            <SafeAreaView style={{flex: 1}}>
+                <View style={{flex: 1}}>
+                    <Text>
+                        Location: {this.state.location}
+                    </Text>
+                    {
+                        (this.state.location !== null) ?
+                            <MapView
+                                style={{flex: 1}}
+                                region={this.state.mapToDisplay}
+                            /> :
+                            <ActivityIndicator size="large"/>
+                    }
+                </View>
+            </SafeAreaView>
         );
     }
 }
