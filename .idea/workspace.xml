@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc403d56-6a24-42ee-a144-85f092fd60fc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/components/map/Map.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/map/Map.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/message/Message.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/message/Message.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/trajet/ActuTrajet.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/trajet/Covoiturage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/trajet/TrajetsEcologiques.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/trajet/Trajets.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/trajet/Trajets.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -29,11 +31,47 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/components/trajet/Trajets.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="44" />
+            <state relative-caret-position="375">
+              <caret line="25" column="34" selection-end-line="39" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/components/trajet/Covoiturage.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="555">
+              <caret line="37" column="7" selection-end-line="47" selection-end-column="3" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/components/trajet/TrajetsEcologiques.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" column="37" lean-forward="true" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/components/trajet/ActuTrajet.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="29" column="16" lean-forward="true" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -53,7 +91,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/components/message/Message.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="345">
@@ -98,9 +136,12 @@
         <option value="$PROJECT_DIR$/styles/Style.js" />
         <option value="$PROJECT_DIR$/components/user/connection/ConnectScreen.js" />
         <option value="$PROJECT_DIR$/App.js" />
-        <option value="$PROJECT_DIR$/components/trajet/Trajets.js" />
         <option value="$PROJECT_DIR$/components/map/Map.js" />
         <option value="$PROJECT_DIR$/components/message/Message.js" />
+        <option value="$PROJECT_DIR$/components/trajet/TrajetsEcologiques.js" />
+        <option value="$PROJECT_DIR$/components/trajet/Covoiturage.js" />
+        <option value="$PROJECT_DIR$/components/trajet/ActuTrajet.js" />
+        <option value="$PROJECT_DIR$/components/trajet/Trajets.js" />
       </list>
     </option>
   </component>
@@ -236,12 +277,12 @@
       <workItem from="1556816027020" duration="1325000" />
       <workItem from="1556817378206" duration="190000" />
       <workItem from="1556994556716" duration="4794000" />
-      <workItem from="1557126789492" duration="4807000" />
+      <workItem from="1557126789492" duration="7314000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36889000" />
+    <option name="totallyTimeSpent" value="39396000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="1055" extended-state="6" />
@@ -353,16 +394,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/trajet/Trajets.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/components/map/Map.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -377,6 +408,46 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/trajet/Covoiturage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="37" column="7" selection-end-line="47" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/trajet/TrajetsEcologiques.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="37" lean-forward="true" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/trajet/ActuTrajet.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="16" lean-forward="true" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/trajet/Trajets.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="34" selection-end-line="39" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
