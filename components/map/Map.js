@@ -1,7 +1,7 @@
 import React from 'react';
-import {ActivityIndicator, Image, SafeAreaView, Text, View} from 'react-native';
+import {ActivityIndicator, Image, Text, View} from 'react-native';
 import {MapView, Location, Permissions} from 'expo';
-import { Ionicons } from '@expo/vector-icons';
+import {Ionicons} from '@expo/vector-icons';
 import Style from "../../styles/Style";
 
 export default class Map extends React.Component {
@@ -9,7 +9,7 @@ export default class Map extends React.Component {
     //We define here the icon for the tab bar
     static navigationOptions = {
         tabBarIcon: ({tintColor}) => {
-            return <Ionicons name="md-search" size={32} color={tintColor} />;
+            return <Ionicons name="md-search" size={32} color={tintColor}/>;
         }
     }
 
@@ -55,21 +55,19 @@ export default class Map extends React.Component {
 
     render() {
         return (
-            <SafeAreaView style={{flex: 1}}>
-                <View style={{flex: 1}}>
-                    <Text>
-                        Location: {this.state.location}
-                    </Text>
-                    {
-                        (this.state.location !== null) ?
-                            <MapView
-                                style={{flex: 1}}
-                                region={this.state.mapToDisplay}
-                            /> :
-                            <ActivityIndicator size="large"/>
-                    }
-                </View>
-            </SafeAreaView>
+            <View style={{flex: 1}}>
+                <Text>
+                    Location: {this.state.location}
+                </Text>
+                {
+                    (this.state.location !== null) ?
+                        <MapView
+                            style={{flex: 1}}
+                            region={this.state.mapToDisplay}
+                        /> :
+                        <ActivityIndicator size="large"/>
+                }
+            </View>
         );
     }
 }

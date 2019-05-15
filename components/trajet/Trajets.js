@@ -1,5 +1,5 @@
 import React from 'react'
-import {View, Text, FlatList, StyleSheet, TouchableOpacity, SafeAreaView} from 'react-native'
+import {View, Text, StyleSheet} from 'react-native'
 import {Ionicons} from '@expo/vector-icons';
 import Style from "../../styles/Style";
 import Actu from './ActuTrajet'
@@ -17,7 +17,7 @@ export default class Trajets extends React.Component {
 
     render() {
         return (
-            <SafeAreaView style={{flex: 1, backgroundColor: Style.darkblue}}>
+            <View style={{flex: 1, backgroundColor: Style.darkblue}}>
                 <View style={{flex: 1}}>
                     <Actu/>
                     <Text style={styles.labelList}>Trajets écologiques</Text>
@@ -25,7 +25,7 @@ export default class Trajets extends React.Component {
                     <Text style={styles.labelList}>Covoiturage</Text>
                     <Covoiturage/>
                 </View>
-            </SafeAreaView>
+            </View>
         );
     }
 }

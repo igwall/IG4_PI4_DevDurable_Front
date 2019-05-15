@@ -1,16 +1,15 @@
 import React from 'react';
-import {StatusBar, View} from 'react-native';
-import Connection from './components/user/connection/ConnectScreen'
-import TabBar from './components/TabBar'
+import {StatusBar, SafeAreaView} from 'react-native';
+import NavigationLogin from './components/user/NavigationLogin'
 
 export default class App extends React.Component {
 
     render() {
         return (
-            <View  style={{flex: 1}}>
+            <SafeAreaView  style={{flex: 1}}>
                 <StatusBar hidden={true}/>
-                <TabBar />
-            </View>
+                <NavigationLogin />
+            </SafeAreaView>
         );
     }
 }

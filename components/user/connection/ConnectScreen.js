@@ -1,14 +1,17 @@
 import React from 'react'
 import { View, StyleSheet, Text, TouchableOpacity, ImageBackground } from 'react-native'
 import Style from '../../../styles/Style'
+import Registration from "../registration/Registration";
+
 
 export default class ConnectScreen extends React.Component {
 
-    todo() {
-        console.log("TODO")
+    componentDidMount() {
+        const {navigate} = this.props.navigation;
     }
 
     render() {
+        const {navigate} = this.props.navigation;
         return (
             <View style={styles.container}>
                 <ImageBackground source={require('../../../assets/homebg.png')} style={{width: '100%', height: '100%'}}>
@@ -17,7 +20,7 @@ export default class ConnectScreen extends React.Component {
                         <Text style={styles.textTitle}>Bienvenue sur Mobilogie</Text>
                         <Text style={styles.text}>Vos trajets quotidiens simplifiés avec un impact environnemental !</Text>
                         <Text style={{color: Style.white, fontWeight: 'bold', marginTop: 30}}>SE CONNECTER AVEC</Text>
-                        <TouchableOpacity style={styles.buttonEmail}>
+                        <TouchableOpacity style={styles.buttonEmail} onPress={() => navigate('Registration')}>
                             <Text style={{color: Style.white, fontWeight: 'bold'}}>EMAIL</Text>
                         </TouchableOpacity>
                         <TouchableOpacity style={styles.buttonOther}>
