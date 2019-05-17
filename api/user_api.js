@@ -3,10 +3,18 @@ import { getBaseUrl } from '../config/config';
 
 const BASE_URL = getBaseUrl();
 
+/**
+ *
+ * @param prenom
+ * @param nom
+ * @param mail
+ * @param password
+ * @param genre
+ * @param dateNaissance
+ * @returns {Promise<AxiosResponse<any> | never>}
+ */
 function addUser(prenom, nom, mail, password, genre, dateNaissance) {
     const url = `${BASE_URL}/user/add`;
-    console.log(url)
-    console.log('not bad')
     return axios.post(url, {
         password: password,
         nom: nom,
@@ -18,4 +26,19 @@ function addUser(prenom, nom, mail, password, genre, dateNaissance) {
         .then(response => response.data);
 }
 
-export {addUser}
+/**
+ *
+ * @param mail
+ * @param password
+ * @returns {Promise<AxiosResponse<any> | never>}
+ */
+function loginUser(mail, password) {
+    const url = `${BASE_URL}/user/login`;
+    return axios.post(url, {
+        password: password,
+        mail: mail,
+    })
+        .then(response => response.data);
+}
+
+export {addUser, loginUser}

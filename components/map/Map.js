@@ -1,8 +1,8 @@
 import React from 'react';
-import {ActivityIndicator, Image, Text, View} from 'react-native';
+import {ActivityIndicator, Text, View} from 'react-native';
 import {MapView, Location, Permissions} from 'expo';
 import {Ionicons} from '@expo/vector-icons';
-import Style from "../../styles/Style";
+import {getBusStops} from "../../api/transport_api";
 
 export default class Map extends React.Component {
 
@@ -17,13 +17,17 @@ export default class Map extends React.Component {
     state = {
         locationPermissions: false,
         location: null,
+        latitude: null,
+        longitude: null,
         locationResult: null,
-        mapToDisplay: null
+        mapToDisplay: null,
+        stops: null
     };
 
     //Function called when the component is mounted
     componentDidMount() {
         this._getLocalisationPermission();
+        this.getBusStops();
     }
 
     //Asynchronous function to get the location of the user
@@ -42,7 +46,7 @@ export default class Map extends React.Component {
         //Get the location
         let loc = await Location.getCurrentPositionAsync({});
         //Update state
-        this.setState({location: JSON.stringify(loc)});
+        this.setState({location: JSON.stringify(loc), latitude: loc.coords.latitude, longitude: loc.coords.longitude});
         this.setState({
             mapToDisplay: {
                 latitude: loc.coords.latitude,
@@ -53,19 +57,42 @@ export default class Map extends React.Component {
         });
     };
 
+    //get bus stops from the api
+    getBusStops() {
+        getBusStops().then((results) => {
+            this.setState({stops: results.stops})
+        })
+    }
+
+    //we create the bus stop markers outside of the render method
+    renderBusMarkers() {
+        const markers = [];
+        var stops = this.state.stops
+        for (var i = 0; i < stops.length; i++) {
+            markers.push(<MapView.Marker key={i}
+                                         coordinate={{latitude: stops[i].stop_lat, longitude: stops[i].stop_lon}}
+                                         title={stops[i].stop_name}
+            />)
+        }
+        return markers
+    };
+
     render() {
         return (
             <View style={{flex: 1}}>
                 <Text>
                     Location: {this.state.location}
+                    Latitude: {this.state.latitude}
                 </Text>
                 {
                     (this.state.location !== null) ?
                         <MapView
                             style={{flex: 1}}
                             region={this.state.mapToDisplay}
-                        /> :
-                        <ActivityIndicator size="large"/>
+                        ><MapView.Marker
+                            coordinate={{latitude: this.state.latitude, longitude: this.state.longitude}}
+                            title="Vous êtes ici"
+                        />{this.renderBusMarkers()}</MapView> : <ActivityIndicator size="large"/>
                 }
             </View>
         );

@@ -66,8 +66,10 @@ export default class Registration extends React.Component {
             prenomError: null,
             prenom: 'gsgdfhdgh',
             dateNaissance: moment(new Date()).format("DD-MM-YYYY"),
-            genre: 'H'
+            genre: 'H',
+            resultMessage: ''
         }
+        this.saveUser.bind(this)
     }
 
     checkFormData = () => {
@@ -84,21 +86,23 @@ export default class Registration extends React.Component {
         })
 
         if (!emailError && !passwordError && !nomError && !prenomError) {
-            console.log('fuck life')
-            this.saveUser().then((result) => {
-                console.log(result)
-            });
+            this.saveUser()
         }
     };
 
     saveUser = () => {
-        console.log('bad very')
-        addUser(this.state.prenom, this.state.nom, this.state.email, this.state.password, this.state.genre, moment(this.state.dateNaissance, 'DD-MM-YYYY').format('YYYY-MM-DD'))
-    };
-
+        addUser(this.state.prenom, this.state.nom, this.state.email, this.state.password, this.state.genre, moment(this.state.dateNaissance, 'DD-MM-YYYY').format('YYYY-MM-DD')).then((result) => {
+            if (!result.success) {
+                this.setState({resultMessage: result.message})
+            } else {
+                this.props.navigation.navigate('Connection')
+            }
+        }).catch((error) => {
+            console.log(error.message)
+        })
+    }
     render() {
         const {emailError, passwordError, nomError, prenomError} = this.state
-
         return (
             <View style={{flex: 1, backgroundColor: Style.darkpurple}}>
                 <Text
@@ -148,6 +152,7 @@ export default class Registration extends React.Component {
                         this.setState({dateNaissance: dateNaissance})
                     }}
                 />
+                <Text>{this.state.resultMessage}</Text>
                 <TouchableOpacity style={styles.buttonNext} onPress={this.checkFormData}>
                     <Text style={{color: Style.white, fontWeight: 'bold'}}>Valider</Text>
                 </TouchableOpacity>

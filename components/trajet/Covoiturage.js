@@ -1,5 +1,5 @@
 import React from 'react'
-import {FlatList, StyleSheet, Text, TouchableOpacity, View} from "react-native";
+import {FlatList, StyleSheet, Text, TouchableOpacity} from "react-native";
 import Style from "../../styles/Style";
 
 export default class Covoiturage extends React.Component {

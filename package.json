@@ -7,6 +7,7 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "@react-native-community/async-storage": "^1.4.0",
     "axios": "^0.18.0",
     "expo": "^32.0.0",
     "expo-cli": "^2.17.1",
@@ -16,7 +17,8 @@
     "react-native-datepicker": "^1.7.2",
     "react-navigation": "^3.9.1",
     "tcomb-form-native": "^0.6.20",
-    "validate.js": "^0.12.0"
+    "validate.js": "^0.12.0",
+    "@expo/vector-icons": "latest"
   },
   "devDependencies": {
     "babel-preset-expo": "^5.0.0"

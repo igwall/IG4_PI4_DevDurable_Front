@@ -6,8 +6,9 @@ import Map from './map/Map'
 import Trajets from './trajet/Trajets'
 import Message from './message/Message'
 
-
-//Tab navigator placed at the bottom
+/**
+ * Tab navigator placed at the bottom
+ */
 export default createAppContainer(
     createBottomTabNavigator({
         //We define here each tab
