@@ -57,14 +57,16 @@ export default class Connection extends React.Component {
         super(props);
         this.state = {
             emailError: null,
-            email: 'alexis@gmail.com',
+            email: 'test@test.com',
             passwordError: null,
-            password: '55555',
-            token: '',
+            password: '12345',
         }
         this.connectUser.bind(this)
     }
 
+    /**
+     * Check form's data
+     */
     checkFormData = () => {
         const emailError = validator('email', this.state.email)
         const passwordError = validator('password', this.state.password)
@@ -83,15 +85,13 @@ export default class Connection extends React.Component {
      * Fonction call the api to connect the user then will store the data received
      */
     connectUser = () => {
-        loginUser(this.state.email, this.state.password).then((result) => {
-           deviceStorage.saveItem("id_token", JSON.stringify(result.token));
-            deviceStorage.saveItem('nomUser', JSON.stringify(result.nom));
-            deviceStorage.saveItem("prenomUser", JSON.stringify(result.prenom));
-            deviceStorage.saveItem("dateNaissance", JSON.stringify(result.dateNaissance));
-            deviceStorage.saveItem("genre", JSON.stringify(result.genre));
-            deviceStorage.saveItem("mail", JSON.stringify(result.mail));
-
-            this.setState({token: result.token});
+        loginUser(this.state.email, this.state.password).then(async (result) => {
+            await deviceStorage.saveItem("id_token", result.token);
+            await deviceStorage.saveItem('nomUser', result.nom);
+            await deviceStorage.saveItem("prenomUser", result.prenom);
+            await deviceStorage.saveItem("dateNaissance", result.dateNaissance);
+            await deviceStorage.saveItem("genre", result.genre);
+            await deviceStorage.saveItem("mail", result.mail);
             this.props.navigation.navigate('TabBar');
         })
     };
@@ -105,7 +105,6 @@ export default class Connection extends React.Component {
                 <Text
                     style={{fontSize: 20, color: Style.white, marginTop: 10, textAlign: 'center', fontWeight: 'bold'}}>
                     Connection
-                    {this.state.token}
                 </Text>
                 <Text style={styles.labelInput}>Email: </Text>
                 <TextInput style={styles.inputStyle}  onChangeText={(email) => this.setState({email})} value={this.state.email} textContentType='emailAddress'/>

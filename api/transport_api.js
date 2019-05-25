@@ -13,4 +13,15 @@ function getBusStops() {
         .then(response => response.data);
 }
 
-export {getBusStops}
+/**
+ * Get tram stops
+ * @returns {Promise<AxiosResponse<any> | never>}
+ */
+function getTramStops() {
+    const url = `${BASE_URL}/transport/tram/stops`;
+    return axios.get(url)
+        .then(response => response.data);
+}
+
+
+export {getBusStops, getTramStops}

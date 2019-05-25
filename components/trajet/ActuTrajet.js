@@ -1,8 +1,8 @@
 import React from 'react'
-import {FlatList, StyleSheet, Text, TouchableOpacity} from "react-native";
+import {FlatList, StyleSheet, Text, TouchableOpacity, View} from "react-native";
 import Style from "../../styles/Style";
 
-export default class Covoiturage extends React.Component {
+export default class ActuTrajet extends React.Component {
 
     renderItem = data =>
         <TouchableOpacity style={styles.row}>
@@ -18,7 +18,7 @@ export default class Covoiturage extends React.Component {
                     {key: 'Trajet1'},
                 ]}
                 renderItem={item => this.renderItem(item)}
-                style={{flex: 1}}
+
             />
         )
     }
@@ -26,9 +26,7 @@ export default class Covoiturage extends React.Component {
 
 const styles = StyleSheet.create({
     list: {
-
-        flex: 1,
-        flexDirection: 'column',
+        flexDirection: 'column'
     },
     row: {
         backgroundColor: Style.bluegreen,
@@ -37,6 +35,7 @@ const styles = StyleSheet.create({
         marginHorizontal: 10,
         marginTop: 5,
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        flex: 1
     },
 });

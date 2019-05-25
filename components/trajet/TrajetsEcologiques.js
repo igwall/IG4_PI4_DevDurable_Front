@@ -13,7 +13,7 @@ export default class Covoiturage extends React.Component {
     render() {
         return (
             <FlatList
-                contentContainerStyle={styles.list}
+                horizontal={true}
                 data={[
                     {key: 'Trajet1'},
                     {key: 'Trajet2'},
@@ -31,10 +31,6 @@ export default class Covoiturage extends React.Component {
 }
 
 const styles = StyleSheet.create({
-    list: {
-        flex: 1,
-        flexDirection: 'row',
-    },
     row: {
         backgroundColor: Style.white,
         borderRadius: 10,

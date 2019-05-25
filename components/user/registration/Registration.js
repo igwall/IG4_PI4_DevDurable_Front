@@ -6,6 +6,10 @@ import { addUser } from "../../../api/user_api";
 import moment from 'moment'
 import validate from 'validate.js'
 
+/**
+ * Form's constraints
+ * @type {{password: {length: {message: string, minimum: number}, presence: {message: string}}, prenom: {presence: {message: string}}, nom: {presence: {message: string}}, email: {presence: {message: string}, email: {message: string}}}}
+ */
 const constraints = {
     email: {
         presence: {
@@ -58,13 +62,13 @@ export default class Registration extends React.Component {
         super(props);
         this.state = {
             emailError: null,
-            email: 'alexis@gmail.com',
+            email: null,
             passwordError: null,
-            password: '55555',
+            password: null,
             nomError: null,
-            nom: 'etestst',
+            nom: null,
             prenomError: null,
-            prenom: 'gsgdfhdgh',
+            prenom: null,
             dateNaissance: moment(new Date()).format("DD-MM-YYYY"),
             genre: 'H',
             resultMessage: ''
@@ -72,6 +76,9 @@ export default class Registration extends React.Component {
         this.saveUser.bind(this)
     }
 
+    /**
+     * Check form's data
+     */
     checkFormData = () => {
         const emailError = validator('email', this.state.email)
         const passwordError = validator('password', this.state.password)
@@ -90,17 +97,21 @@ export default class Registration extends React.Component {
         }
     };
 
+    /**
+     * Call to the API to save the user in the db
+     */
     saveUser = () => {
         addUser(this.state.prenom, this.state.nom, this.state.email, this.state.password, this.state.genre, moment(this.state.dateNaissance, 'DD-MM-YYYY').format('YYYY-MM-DD')).then((result) => {
             if (!result.success) {
                 this.setState({resultMessage: result.message})
             } else {
-                this.props.navigation.navigate('Connection')
+                this.props.navigation.navigate('Login')
             }
         }).catch((error) => {
             console.log(error.message)
         })
     }
+
     render() {
         const {emailError, passwordError, nomError, prenomError} = this.state
         return (

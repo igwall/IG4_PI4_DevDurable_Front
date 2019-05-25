@@ -7,6 +7,7 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "@expo/vector-icons": "latest",
     "@react-native-community/async-storage": "^1.4.0",
     "axios": "^0.18.0",
     "expo": "^32.0.0",
@@ -15,10 +16,12 @@
     "react": "16.5.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
     "react-native-datepicker": "^1.7.2",
+    "react-native-elements": "^1.1.0",
+    "react-native-map-clustering": "^1.3.2",
+    "react-native-maps": "^0.24.2",
     "react-navigation": "^3.9.1",
     "tcomb-form-native": "^0.6.20",
-    "validate.js": "^0.12.0",
-    "@expo/vector-icons": "latest"
+    "validate.js": "^0.12.0"
   },
   "devDependencies": {
     "babel-preset-expo": "^5.0.0"
