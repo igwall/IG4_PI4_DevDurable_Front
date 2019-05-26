@@ -57,9 +57,9 @@ export default class Connection extends React.Component {
         super(props);
         this.state = {
             emailError: null,
-            email: 'test@test.com',
+            email: null,
             passwordError: null,
-            password: '12345',
+            password: null,
         }
         this.connectUser.bind(this)
     }

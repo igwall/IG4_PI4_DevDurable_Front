@@ -110,15 +110,10 @@ export default class Map extends React.Component {
                 {
                     (this.state.location !== null) ?
                         <MapView
-                            clustering = {true}
-                            clusterColor = '#000'
-                            clusterTextColor = '#fff'
-                            clusterBorderColor = '#fff'
-                            clusterBorderWidth = {4}
                             style={{flex: 1}}
                             region={this.state.mapToDisplay}
                         ><Marker
-                            coordinate={{latitude: 43.6327275, longitude: 3.8628894}}
+                            coordinate={{latitude: this.state.latitude, longitude: this.state.longitude}}
                             title="Vous êtes ici"
                             pinColor={'red'}
                         />{this.renderBusMarkers()}{this.renderTramMarkers()}</MapView> : <ActivityIndicator size="large"/>
